@@ -16,7 +16,7 @@ export function ProductTable({
   filterText,
   inStockOnly,
 }: ProductTableProps) {
-  const rows: any[] = [];
+  const rows: JSX.Element[] = [];
 
   let currentCategory: string | null = null;
   let sectionId = 0;

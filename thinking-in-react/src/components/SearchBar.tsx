@@ -1,8 +1,8 @@
 type SearchBarProps = {
   filterText: string;
   inStockOnly: boolean;
-  onFilterTextChange: Function;
-  onInStockOnlyChange: Function;
+  onFilterTextChange: (value: string) => void;
+  onInStockOnlyChange: (value: boolean) => void;
 };
 
 export function SearchBar({
