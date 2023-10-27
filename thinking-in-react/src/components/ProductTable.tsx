@@ -45,7 +45,7 @@ export function ProductTable({
       if (inStockOnly) {
         return;
       }
-      name = <span style={{ color: "red" }}>{product.name}</span>;
+      name = <span className="not-stocked-product">{product.name}</span>;
     }
 
     rows.push(
