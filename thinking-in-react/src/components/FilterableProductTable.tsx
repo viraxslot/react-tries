@@ -1,10 +1,15 @@
-import { useState } from "react";
+import {memo, useState} from "react";
 import { Product, ProductTable } from "./ProductTable";
 import { SearchBar } from "./SearchBar";
 
 export type FilterableProductTableProps = {
   products: Product[];
 };
+
+const Lox = memo(function Lox(props: {inStockOnly: boolean}) {
+    console.log('lox rendered')
+    return <span>Lox {props.inStockOnly.toString()}</span>
+})
 
 export function FilterableProductTable({
   products,
@@ -25,6 +30,7 @@ export function FilterableProductTable({
         filterText={filterText}
         inStockOnly={inStockOnly}
       />
+        <Lox inStockOnly={inStockOnly}/>
     </>
   );
 }

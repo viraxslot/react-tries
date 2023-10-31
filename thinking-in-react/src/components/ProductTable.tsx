@@ -1,3 +1,6 @@
+import type {ReactElement} from "react";
+import styles from "./ProductTable.module.css";
+
 export type Product = {
   category: string;
   price: string;
@@ -16,7 +19,7 @@ export function ProductTable({
   filterText,
   inStockOnly,
 }: ProductTableProps) {
-  const rows: JSX.Element[] = [];
+  const rows: ReactElement[] = [];
 
   let currentCategory: string | null = null;
   let sectionId = 0;
@@ -45,7 +48,7 @@ export function ProductTable({
       if (inStockOnly) {
         return;
       }
-      name = <span className="not-stocked-product">{product.name}</span>;
+      name = <span className={styles.notStockedProduct}>{product.name}</span>;
     }
 
     rows.push(

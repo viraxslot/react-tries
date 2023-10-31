@@ -1,5 +1,6 @@
 import "./App.css";
 import { FilterableProductTable } from "./components/FilterableProductTable";
+import {CatFacts} from "./components/CatFacts.tsx";
 
 const products = [
   { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <FilterableProductTable products={products} />
+      <CatFacts/>
     </>
   );
 }
